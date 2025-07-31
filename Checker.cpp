@@ -21,7 +21,7 @@ bool isSocOk(float soc) {
 bool isChargeRateOk(float chargeRate) {
   if (chargeRate > 0.8) {
     cout << "Charge Rate out of range!\n";
-    return false
+    return false;
   }
   return true;
 }

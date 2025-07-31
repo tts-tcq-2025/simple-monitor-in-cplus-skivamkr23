@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+/*Function that checks if the temperature is within the acceptable range*/
 bool isTemperatureOk(float temperature) {
   if (temperature < 0 || temperature > 45) {
     cout << "Temperature out of range!\n";
@@ -10,6 +11,7 @@ bool isTemperatureOk(float temperature) {
   return true;
 }
 
+/*Function that checks if SOC is within the acceptable range*/
 bool isSocOk(float soc) {
   if (soc < 20 || soc > 80) {
     cout << "State of Charge out of range!\n";
@@ -18,6 +20,7 @@ bool isSocOk(float soc) {
   return true;
 }
 
+/*Function that checks if charge rate is within the acceptable range*/
 bool isChargeRateOk(float chargeRate) {
   if (chargeRate > 0.8) {
     cout << "Charge Rate out of range!\n";
@@ -26,6 +29,7 @@ bool isChargeRateOk(float chargeRate) {
   return true;
 }
 
+/*Function that checks overall batterly status*/
 bool batteryIsOk(float temperature, float soc, float chargeRate) {
   return isTemperatureOk(temperature) &&
          isSocOk(soc) &&
